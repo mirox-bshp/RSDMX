@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>شروط الاستخدام | رشق دعمكم</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background:
+        radial-gradient(
+          circle at 50% -10%,
+          rgba(105, 45, 190, 0.20),
+          transparent 35%
+        ),
+        #050505;
+      color: #f5f5f5;
+      font-family: "Tajawal", sans-serif;
+      line-height: 2;
+      min-height: 100vh;
+    }
+
+    .page {
+      width: min(920px, 94%);
+      margin: auto;
+      padding: 35px 0 60px;
+    }
+
+    /* العنوان */
+    .hero {
+      text-align: center;
+      padding: 35px 20px;
+      margin-bottom: 25px;
+      border: 1px solid rgba(160, 90, 255, 0.25);
+      border-radius: 24px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(120, 50, 220, 0.16),
+          rgba(255, 255, 255, 0.025)
+        );
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .hero .icon {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+      background: linear-gradient(135deg, #7c3aed, #a855f7);
+      box-shadow: 0 10px 35px rgba(124, 58, 237, 0.35);
+    }
+
+    .hero h1 {
+      font-size: clamp(25px, 5vw, 38px);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 5px;
+    }
+
+    .hero p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    /* صندوق الشروط */
+    .terms {
+      padding: 30px 25px;
+      border-radius: 24px;
+      background: rgba(13, 13, 16, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .section-title {
+      color: #b875ff;
+      font-size: 20px;
+      font-weight: 800;
+      margin: 5px 0 22px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(168, 85, 247, 0.20);
+      text-align: center;
+    }
+
+    .rule {
+      position: relative;
+      margin: 0 0 18px;
+      padding: 16px 18px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.025);
+      border-right: 3px solid #7135c8;
+      color: #ddd;
+      font-size: 15px;
+      transition: 0.25s ease;
+    }
+
+    .rule:hover {
+      background: rgba(124, 58, 237, 0.08);
+      transform: translateX(-3px);
+    }
+
+    .rule.red {
+      border-right-color: #ef4444;
+    }
+
+    .rule.green {
+      border-right-color: #22c55e;
+    }
+
+    .rule.yellow {
+      border-right-color: #f59e0b;
+    }
+
+    .rule.purple {
+      border-right-color: #a855f7;
+    }
+
+    .rule.blue {
+      border-right-color: #3b82f6;
+    }
+
+    .rule strong {
+      color: #fff;
+      font-weight: 800;
+    }
+
+    /* هام جداً */
+    .important {
+      margin-top: 32px;
+      padding: 22px;
+      border-radius: 20px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(245, 158, 11, 0.08),
+          rgba(239, 68, 68, 0.05)
+        );
+      border: 1px solid rgba(245, 158, 11, 0.20);
+    }
+
+    .important-title {
+      text-align: center;
+      color: #fbbf24;
+      font-size: 21px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .important-text {
+      padding: 15px;
+      margin-bottom: 12px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.025);
+      color: #ddd;
+      font-size: 15px;
+    }
+
+    /* الدعم */
+    .support {
+      margin-top: 25px;
+      padding: 28px 20px;
+      text-align: center;
+      border-radius: 20px;
+      background:
+        linear-gradient(
+          135deg,
+          rgba(124, 58, 237, 0.16),
+          rgba(59, 130, 246, 0.08)
+        );
+      border: 1px solid rgba(124, 58, 237, 0.25);
+    }
+
+    .support h2 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .support p {
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .support a {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #7c3aed, #9333ea);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 15px;
+      box-shadow: 0 8px 25px rgba(124, 58, 237, 0.30);
+      transition: 0.25s ease;
+    }
+
+    .support a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(124, 58, 237, 0.40);
+    }
+
+    .support a:active {
+      transform: scale(0.97);
+    }
+
+    /* الحقوق */
+    footer {
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+      padding-top: 30px;
+    }
+
+    footer span {
+      color: #9b5cff;
+    }
+
+    /* الموبايل */
+    @media (max-width: 600px) {
+
+      .page {
+        width: 94%;
+        padding-top: 18px;
+      }
+
+      .hero {
+        padding: 28px 15px;
+      }
+
+      .hero .icon {
+        width: 62px;
+        height: 62px;
+        font-size: 29px;
+      }
+
+      .terms {
+        padding: 20px 14px;
+      }
+
+      .rule,
+      .important-text {
+        font-size: 14px;
+        padding: 14px;
+      }
+
+      .hero h1 {
+        font-size: 25px;
+      }
+
+      .section-title {
+        font-size: 17px;
+      }
+
+      .important-title {
+        font-size: 18px;
+      }
+
+      .support h2 {
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <!-- العنوان -->
+    <section class="hero">
+
+      <div class="icon">
+        ⛔️
+      </div>
+
+      <h1>
+        شـروط الاسـتـخـدام
+      </h1>
+
+      <p>
+        سياسة وشروط استخدام خدمات رشق دعمكم
+      </p>
+
+    </section>
+
+
+    <!-- الشروط -->
+    <section class="terms">
+
+      <div class="section-title">
+        ╭━━━ ⛔️ 𝗦𝗧𝗔𝗥𝗧 | شـروط الاسـتـخـدام ━━━╮
+      </div>
+
+
+      <div class="rule red">
+        ❌ • فـي حـال قـمـت بـتـغـيـيـر الـيـوزر أثـنـاء تـنـفـيـذ الـطـلـب، يُـعـتـبـر الـطـلـب مـكـتـمـل جـزئـيـاً، ولا يـحـق لـصـاحـب الـطـلـب الـمـطـالـبـة بـأي تـعـويـض.
+      </div>
+
+
+      <div class="rule green">
+        ✔️ • عـنـد الـتـواصـل مـع خـدمـة الـعـمـلاء، يُـرجـى الـتـحـدث بـطـريـقـة لائـقـة والـتـزام الاحـتـرام مـع فـريـق الـدعـم، وأي إسـاءة أو تـجـاوز قـد تـؤدي إلـى حـظـر الـحـسـاب.
+      </div>
+
+
+      <div class="rule red">
+        ❌ • فـي حـال قـمـت بـحـذف أي مـنـشـور أو فـيـديـو أثـنـاء تـنـفـيـذ الـطـلـب، يُـعـتـبـر الـطـلـب مـكـتـمـلاً، ولا يـحـق لـك الـمـطـالـبـة بـأي تـعـويـض.
+      </div>
+
+
+      <div class="rule yellow">
+        ‼️ • فـي حـال قـمـت بـتـغـيـيـر يـوزر الـحـسـاب بـعـد انـتـهـاء تـنـفـيـذ الـطـلـب، لا يـمـكـن الـمـطـالـبـة بـتـعـويـض أو إعـادة تـنـفـيـذ الـطـلـب.
+      </div>
+
+
+      <div class="rule yellow">
+        ‼️ • يـجـب أن تـكـون جـمـيـع الـحـسـابـات والـروابـط الـمُـسـتـخـدمـة فـي الـطـلـبـات عـامـة ولـيـسـت خـاصـة، حـتـى يـتـمـكـن الـنـظـام مـن تـنـفـيـذ الـطـلـب بـشـكـل صـحـيـح.
+      </div>
+
+
+      <div class="rule yellow">
+        ‼️ • لا يـمـكـن إلـغـاء أي طـلـب بـعـد إرسـالـه إلـى الـسـيـرفـر، لـذلـك يُـرجـى مـراجـعـة الـخـدمـة والـعـدد والـيـوزر بـعـنـايـة قـبـل تـأكـيـد الـطـلـب.
+      </div>
+
+
+      <div class="rule yellow">
+        ‼️ • فـي حـال تـحـويـل الـحـسـاب إلـى خـاص أثـنـاء تـنـفـيـذ الـطـلـب، يُـعـتـبـر الـطـلـب مـكـتـمـل جـزئـيـاً، ولا يـتـم تـقـديـم أي تـعـويـض عـن الـكـمـيـة الـمـتـبـقـيـة.
+      </div>
+
+
+      <div class="rule purple">
+        🔥 • يـتـم تـنـفـيـذ الـطـلـبـات وفـق الـعـدد الـذي يـتـم تـثـبـيـتـه تـلـقـائـيـاً عـنـد إرسـال الـطـلـب، ولا يـمـكـن تـغـيـيـر الـعـدد بـعـد بـدء الـتـنـفـيـذ.
+      </div>
+
+
+      <div class="rule blue">
+        ‼️ • يـجـب عـلـيـك قـراءة تـفـاصـيـل كـل خـدمـة بـعـنـايـة قـبـل تـنـفـيـذ أي طـلـب جـديـد، والـتـأكـد مـن أـن الـخـدمـة مـنـاسـبـة لـلـحـسـاب أو الـرابـط الـمُـسـتـخـدم.
+      </div>
+
+
+      <div class="rule red">
+        ❌ • لا يـتـم إلـغـاء الـطـلـبـات أو إعـادة الـمـبـالـغ بـعـد إرسـال الـطـلـب لأي سـبـب، إلا فـي حـال فـشـل الـنـظـام فـي تـنـفـيـذ الـطـلـب أو وجـود مـشـكـلـة تـقـنـيـة مـن جـانـب الـنـظـام.
+      </div>
+
+
+      <div class="rule green">
+        ✔️ • بـمـجـرد تـنـفـيـذ طـلـب جـديـد، فـأنـت تـؤكـد أنـك قـمـت بـقـراءة جـمـيـع الـشـروط والـتـفـاصـيـل، وتـوافـق عـلـى سـيـاسـة الـطـلـبـات والـتـعـويـضـات.
+      </div>
+
+
+      <!-- هام جداً -->
+      <div class="important">
+
+        <div class="important-title">
+          ╭━━━ ⚠️ هـام جـداً ━━━╮
+          <br>
+          🔥 نـظـام الـتـعـويـض الـتـلـقـائـي
+          <br>
+          ╰━━━━━━━━━━━━━━╯
+        </div>
+
+        <div class="important-text">
+          ⚡ يـتـم مـراجـعـة الـطـلـبـات وفـق نـظـام الـتـعـويـض الـتـلـقـائـي، وفـي حـال تـحـقـق شـروط الـتـعـويـض، يـتـم تـنـفـيـذ الـتـعـويـض وفـق سـيـاسـة الـخـدمـة.
+        </div>
+
+      </div>
+
+
+      <!-- الدعم -->
+      <div class="support">
+
+        <h2>
+          📞 لـلـتـواصـل مـع خـدمـة الـدعـم
+        </h2>
+
+        <p>
+          فريق دعمكم جاهز لمساعدتك
+        </p>
+
+        <a
+          href="https://t.me/DKSUPBOTX"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          التواصل مع الدعم
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- الحقوق -->
+    <footer>
+      جميع الحقوق محفوظة ©
+      <span>2026 رشق دعمكم</span>
+    </footer>
+
+  </main>
+
+</body>
+</html>
